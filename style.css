@@ -1,0 +1,83 @@
+*{
+    margin:0px !important;
+    padding:0px !important;
+}
+header{
+    color: #F9F9F9;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#bgm{
+    height: 100px;
+    width: 100%;
+    background-color: #073763;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+#logo>img{
+width:110px;
+height:50px;
+}
+#logo h1 {
+    margin: 0 0 0 10px; 
+    color: #F9F9F9;
+    font-weight: 500 !important;
+}
+
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#heading ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap; /* Ensure items don't wrap to a new line */
+    gap: 20px; /* Adjust spacing between items as needed */
+}
+
+#heading li {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#school-dropdown {
+    position: relative;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#dropdown-content li {
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+#dropdown-content li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Optional: hover effect for the dropdown */
+#school-dropdown:hover #dropdown-content {
+    display: block;
+}
