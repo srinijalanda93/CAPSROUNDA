@@ -1,8 +1,12 @@
 *{
     margin:0px !important;
     padding:0px !important;
+    /* overflow: hidden; */
 }
 header{
+    /* overflow: hidden; */
+    position: sticky;
+    top:0;
     color: #F9F9F9;
     display:flex;
     flex-direction: row;
@@ -10,7 +14,7 @@ header{
     justify-content: space-between;
 }
 #bgm{
-    height: 100px;
+    height: 70px;
     width: 100%;
     background-color: #073763;
 }
@@ -26,7 +30,7 @@ height:50px;
 #logo h1 {
     margin: 0 0 0 10px; 
     color: #F9F9F9;
-    font-weight: 500 !important;
+    font-weight: 100 !important;
 }
 
 
@@ -34,6 +38,8 @@ ul, li {
     margin: 0;
     padding: 0;
     list-style: none;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 #heading ul {
@@ -50,34 +56,136 @@ ul, li {
     cursor: pointer;
 }
 
-#school-dropdown {
+#school-dropdown-1, #school-dropdown-2 {
     position: relative;
-}
+  }
 
-#dropdown-content {
+  #dropdown-content-1, #dropdown-content-2 {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    min-width: 160px;
+    z-index: 100;
+    
     list-style-type: none;
-    padding: 0;
+    padding-inline: 5px;
     margin: 0;
-}
+    background-color: #073763;
+    color: #F9F9F9;
+  }
 
-#dropdown-content li {
-    padding: 12px 16px;
+  #dropdown-content-1 li, #dropdown-content-2 li {
+    /* padding: 12px 16px; */
+    padding-inline: 5px;
     cursor: pointer;
-}
+  }
 
-#dropdown-content li:hover {
-    background-color: #f1f1f1;
-}
+  #dropdown-content-1 li:hover, #dropdown-content-2 li:hover {
+    background-color: #073763;
+    color: #F9F9F9;
+  }
 
-/* Optional: hover effect for the dropdown */
-#school-dropdown:hover #dropdown-content {
+  /* Optional: hover effect for the dropdown */
+  #school-dropdown-1:hover #dropdown-content-1,
+  #school-dropdown-2:hover #dropdown-content-2 {
     display: block;
+  }
+
+  main {
+    margin-top: 100px; /* Adjust based on the header height */
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Adjust based on the header height */
+  }
+
+  iframe {
+    width: 100%;
+    height: calc(100vh - 100px); /* Adjust based on the header height */
+  }
+  .guidance>div>img{
+    height:340px;
+  }
+  #info{
+    width:700px;
+  }
+  #info>h1,#info>h2{
+        color:#0041A5; 
+        position: relative;
+    transition: color 0.3s ease;
+  }
+  #info > h1.hovered,#info > h2.hovered {
+    color: #073763;
+}
+
+#info > h1.hovered::after,#info > h2.hovered::after {
+    content: '\1F517'; /* Unicode for link icon */
+    font-size: 20px;
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+#info > h1.hovered::after ,#info > h2.hovered::after{
+    right: 10px;
+    opacity: 1;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+    z-index: 1; 
+}
+
+.text-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Ensure the text is on top of the overlay image */
+}
+
+.text-container p {
+    font-family: "Wittgenstein", serif;
+    margin: 10px 0;
+    color:#F9F9F9;
+}
+
+.text-container>p:nth-child(2){
+    font-style: normal;
+}
+.description {
+    background-color: #3D85C6;
+    color: #f0ebeb;
+    text-shadow: 0.25px 0.5px whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.description #image img {
+    width: 400px; 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
 }
