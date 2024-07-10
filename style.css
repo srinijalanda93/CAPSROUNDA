@@ -1,10 +1,11 @@
 *{
+    /* overflow-x: hidden; */
     margin:0px !important;
     padding:0px !important;
     /* overflow: hidden; */
 }
 header{
-    /* overflow: hidden; */
+    /* overflow-x: hidden; */
     position: sticky;
     top:0;
     color: #F9F9F9;
@@ -12,6 +13,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
 }
 #bgm{
     height: 70px;
@@ -188,4 +190,41 @@ ul, li {
     max-width: 100%; 
     height: auto; 
     display: block; 
+}
+.sessions >div>img{
+    width:300px;
+   height:300px ;
+}
+.sessions>div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.sen > button {
+    margin-top: 15px !important;
+    padding-inline: 25% !important;
+    /* padding-right: 5px; */
+    font-size: 20px;
+}
+footer > section >img{
+    width: 100%;
+    height: 200px;
+}
+footer > section{
+    position: relative;
+}
+.overImage{
+    position: absolute;
+    top:10%;
+    left:10%
+
+}
+.ptags{
+    padding-inline:20px !important;
+}
+.ptags p{
+    
+    color:white;
+    font-weight: 500;
 }
