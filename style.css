@@ -48,8 +48,8 @@ ul, li {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: nowrap; /* Ensure items don't wrap to a new line */
-    gap: 20px; /* Adjust spacing between items as needed */
+    flex-wrap: nowrap;
+    gap: 20px; 
 }
 
 #heading li {
@@ -92,6 +92,34 @@ ul, li {
   #school-dropdown-1:hover #dropdown-content-1,
   #school-dropdown-2:hover #dropdown-content-2 {
     display: block;
+  }
+  #search-container {
+    position: relative;
+}
+#search-icon {
+    cursor: pointer;
+}
+#search-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #073763;
+    background-color: #F9F9F9;
+    border: none;
+    border-radius: 5px;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    
+    width: 0;
+}
+#search-input.active {
+    opacity: 1;
+    width: 100%; 
   }
 
   main {

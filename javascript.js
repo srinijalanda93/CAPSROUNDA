@@ -37,4 +37,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
   h2Tag.addEventListener("mouseleave", () => {
     h2Tag.classList.remove("hovered");
   });
+
+ 
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const searchIcon = document.getElementById("search-icon");
+  const searchInput = document.getElementById("search-input");
+
+  searchIcon.addEventListener("mouseenter", () => {
+    searchInput.classList.add("active");
+    searchInput.style.width = "100%"; // Ensure width is set to cover the header
+    searchInput.focus(); // Focus on the input when mouse enters
+  });
+
+  searchInput.addEventListener("blur", () => {
+    searchInput.classList.remove("active");
+    searchInput.style.width = "0"; // Reset width to hide the input
+  });
 });
