@@ -213,18 +213,23 @@ footer > section >img{
 }
 footer > section{
     position: relative;
+    box-sizing: border-box !important;
 }
 .overImage{
     position: absolute;
-    top:10%;
+    top:20%;
     left:10%
 
 }
 .ptags{
-    padding-inline:20px !important;
+    padding-inline:24px !important;
 }
 .ptags p{
-    
     color:white;
     font-weight: 500;
+}
+.ptags i{
+    padding-inline: 6px !important;
+    font-size: 30px;
+    color:#ffff;
 }
