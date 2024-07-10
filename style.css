@@ -233,3 +233,19 @@ footer > section{
     font-size: 30px;
     color:#ffff;
 }
+footer >section>div:last-child{
+    height: 70px;
+    width: 100%;
+    background-color: #000912;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.sticky-icon {
+    background-color: azure;
+    position: fixed;
+    bottom: 10px;
+    left: 3px;
+    border-radius: 1px;
+  }
+  
